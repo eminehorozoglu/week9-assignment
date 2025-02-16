@@ -44,3 +44,5 @@ Reflections:
 
 8-If I had time, I would have added comments to the posts, but I couldn't because I ran out of time.
 
+9- I had to add it to the menu because I could not direct the page to the new user page. I can not control the user to add a single profile at the moment. I could not develop the code because I did not have time.
+
