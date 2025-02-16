@@ -3,6 +3,12 @@ import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 
 
+export const metadata = {
+    title: "Change Post",
+    description: "You can create new account",
+  };
+  
+
 
 
 export default async function ChangeData({params}){

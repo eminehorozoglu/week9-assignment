@@ -3,6 +3,13 @@ import {db} from "@/app/utils/dbConnection";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 
+
+export const metadata = {
+  title: "Create new profile",
+  description: "You can create new profile before use this website",
+};
+
+
 export default async function NewProfile(){
     const { userId } = await auth();
     console.log({userId})

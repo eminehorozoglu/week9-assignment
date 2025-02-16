@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Project name: Social Network
 
-## Getting Started
+Vercel link: 
 
-First, run the development server:
+Repo link: 
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Project description:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+A website that is completely yours. You must first register on the site. If you are not registered, you cannot enter the profile page.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+After registering as a user on the site, you will be directed to a new user registration. After entering your information here, you will be directed to the page where you will create your profile. After registering here, you will have created your own profile page.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+After logging in to the site, you can share any post you want on the my profile page. If you want, you can update your profile data.
 
-## Learn More
+You can see the profiles of all users registered on the site on the all user profile page.
 
-To learn more about Next.js, take a look at the following resources:
+You can access the posts shared by all users on the all post page.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+If you want to change or delete the posts you have shared, you can make the desired change by using the change or delete posts button under the relevant post on the my profile page.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Databese on Supabase:
 
-## Deploy on Vercel
+![database](./public/database.jpg)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+My Project Plan :
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+![database](./public/trello.jpg)
+
+Reflections:
+
+1- After signing up with clerk, it took me a while to find the page I wanted to assign.
+
+2-Normally, I created the database files after making a plan. But in this project, I created the sql tables step by step. After creating the sql table, I created the java codes. I proceeded step by step by doing this for each page.#
+
+3-I couldn't create a wireframe because I wasn't sure what exactly I wanted to show on the sql tables and page. The pages formed in my head as I created them.
+
+4-I had difficulty creating queries for the sql tables and connecting them to each other.
+
+5-I tried to make a form with radix, but it was difficult for me and made the simple menu with radix.
+
+6-I used a motion effect for the home page.
+
+7-I didn't use many styles because I didn't have enough time. I just used tailwind.
+
+8-If I had time, I would have added comments to the posts, but I couldn't because I ran out of time.
+

@@ -1,7 +1,7 @@
 "use client"; 
 import enjoy from "@/../public/enjoy-your-life.jpg";
 import Image from "next/image";
-import enjoy2 from "@/../public/enjoy.jpg";
+
 
 import * as motion from "motion/react-client";
 

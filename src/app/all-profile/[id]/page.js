@@ -15,7 +15,7 @@ export default async function OneUserProfile({params}){
            const oneData = wrangleData[0];
            console.log (oneData.userforsocial_id);
 
-           const postdata = await db.query(` SELECT * from posts where userforsocial_id=$1`, [
+           const postdata = await db.query(` SELECT * from posts where userforsocial_id=$1 order by posts.id desc`, [
             oneData.userforsocial_id]);
                    console.log(postdata);
                    const wrangleDataPost = postdata.rows;

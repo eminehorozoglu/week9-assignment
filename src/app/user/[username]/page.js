@@ -4,6 +4,10 @@ import {db} from "@/app/utils/dbConnection";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 
+export const metadata = {
+  title: "New User",
+  description: "You can create new account",
+};
 
 export default async function UserProfilePage() {
   const { userId } = await auth();

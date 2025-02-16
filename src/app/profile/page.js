@@ -9,6 +9,12 @@ import { redirect } from "next/navigation";
 import Link from "next/link";
 
 
+export const metadata = {
+  title: "Social Network Profile",
+  description: "Your profile page",
+};
+
+
 
 export default async function UserProfilePage() {
   const { userId } = await auth();
