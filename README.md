@@ -1,8 +1,8 @@
 Project name: Social Network
 
-Vercel link: 
+Vercel link: week9-assignment-ten.vercel.app
 
-Repo link: 
+Repo link: https://github.com/eminehorozoglu/week9-assignment
 
 Project description:
 
