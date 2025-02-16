@@ -17,7 +17,7 @@ import {
         <SignedOut>
 
               <SignInButton />
-              <SignUpButton />
+              <SignUpButton signInFallbackRedirectUrl='/user/${userId}' fallbackRedirectUrl='/user/${userId}'/>
             </SignedOut>
             <SignedIn>
             

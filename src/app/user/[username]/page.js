@@ -3,6 +3,8 @@ import { SignUp } from "@clerk/nextjs";
 import {db} from "@/app/utils/dbConnection";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
+import { notFound } from "next/navigation";
+
 
 export const metadata = {
   title: "New User",
@@ -21,6 +23,10 @@ const  phoneNumber = formValues.get("phone");
 const UserId ={ userId };
 console.log(UserId)
 
+if (UserId.length === 0) {
+  notFound();
+}
+
 db.query(`insert into userforsocial (firstname, surname, username, date,phone, user_id) values ($1, $2,$3, $4 ,$5,$6)`,[firstName,surName,userName,date,phoneNumber,userId]);
 revalidatePath(`/user/${userId}`);
 redirect(`/create-profile/${userId}`);
@@ -30,9 +36,10 @@ redirect(`/create-profile/${userId}`);
 
 
     return(<>
-    
-    <p>Hello {userId}</p>
-    <p>Please fill in the form information for register this website</p>
+    <div className="flex flex-col items-center">
+    <p className="text-2xl">Hello {userId}</p>
+    <p className="text-2xl">Please fill in the form information for register this website</p>
+    </div>
     <form action={handleSubmit}  className="flex flex-col items-center">
     <label htmlFor="firstname">First Name:</label>
     <input type="text" name="firstname" id="firstname" className="text-amber-900 bg-amber-200" required />
