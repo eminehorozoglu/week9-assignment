@@ -30,6 +30,7 @@ export default async function NewProfile(){
   const userforsocial_id = wrangleduser.id ;
 console.log(wrangleduser.id);
 
+
   
   db.query(`insert into profile (firstname, surname, email, comment, userforsocial_id) values ($1, $2,$3, $4 ,$5)`,[firstName,surName,email,comment,userforsocial_id]);
   revalidatePath(`/user/${userId}`);

@@ -16,6 +16,7 @@ export default async function Menu() {
 	<Badge variant="solid" radius="full" color="cyan" size="3"><Link href={"/profile"}>My Profile  </Link></Badge>
 	<Badge variant="solid" radius="full" color="crimson" size="3"><Link href={"/all-profile"}>All Users Profile</Link></Badge>
   <Badge variant="solid" radius="full" color="orange" size="3"><Link href={"/post"}>All Post  </Link></Badge>
+  <Badge variant="solid" radius="full" color="green" size="3"><Link href={"/user"}>New user  </Link></Badge>
   </Flex>
   </nav>
 
