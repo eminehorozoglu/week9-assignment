@@ -27,7 +27,7 @@ export default async function UserProfilePage() {
             notFound();
           }
  
-          const postdata = await db.query(` SELECT posts.id,posts.post_text,posts.userforsocial_id, userforsocial.username from userforsocial join posts on userforsocial.id = posts.userforsocial_id where userforsocial.user_id =$1`, [
+          const postdata = await db.query(` SELECT posts.id,posts.post_text,posts.userforsocial_id, userforsocial.username from userforsocial join posts on userforsocial.id = posts.userforsocial_id where userforsocial.user_id =$1 order by posts.id desc`, [
     userId,
        ]);
        console.log(postdata);
@@ -53,6 +53,8 @@ redirect("/profile");
     <p className="text-xl">{data.email}</p>
     <p className="text-xl">{data.comment}</p>
     <Link href={`/profile/${data.id}`} className="bg-amber-600 hover:bg-amber-700 text-white font-bold py-2 px-4 rounded-full">Update profile</Link>
+
+  
    
   </div>)
   
@@ -60,7 +62,7 @@ redirect("/profile");
 
 <form action={handleSubmit} className="flex flex-col items-center" >
 
-    <label htmlFor="post">Do you want to share something? Just do it !</label>
+    <label htmlFor="post" className="text-3xl">Do you want to share something? Just do it !</label>
     <textarea name="post" id="post" className="text-amber-900 bg-amber-200 rounded-xl" rows="3" cols="50"  />
 		<button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" >Submit 👋</button>
 
@@ -71,6 +73,7 @@ redirect("/profile");
 wrangleDataPost.map((datapost)=><div key={datapost.id} >
 <h2 className="text-3xl font-bold ">{datapost.username}</h2>
 <p className="text-2xl ">{datapost.post_text}</p>
+<Link href={`/change-post/${datapost.id}`} className="bg-amber-600 hover:bg-amber-700 text-white font-bold py-2 px-4 rounded-full">Change or Delete Posts</Link>
 
 </div>)
 }

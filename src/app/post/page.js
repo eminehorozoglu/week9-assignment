@@ -25,7 +25,7 @@ export default async function UserPostPage() {
 wrangleData.map((data)=><div key={data.id} className="flex flex-row items-center" >
 <h2 className="text-2xl font-bold ">{data.username} says:</h2>
 <p className="text-xl ">{data.post_text}</p>
-<Link href={`/post-comment/${data.id}`} className="bg-amber-600 hover:bg-amber-700 text-white font-bold py-2 px-4 rounded-full">Comment</Link>
+
 
 
 </div>)
