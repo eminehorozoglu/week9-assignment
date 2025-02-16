@@ -1,0 +1,9 @@
+.menu{
+    display: flex;
+    text-align: center;
+    align-items:center;
+    justify-content:space-evenly;
+    flex-wrap: wrap;
+    font-size: 2rem;
+    padding: 20px;
+  }

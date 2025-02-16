@@ -1,3 +1,8 @@
+
+import { ClerkProvider} from '@clerk/nextjs'
+import Header from '@/components/Header';
+import Menu from '@/components/Menu';
+
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -18,12 +23,21 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
+    
+    <ClerkProvider>
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+      
+      <Menu/>
+
+       <Header />
+   
+        
         {children}
       </body>
     </html>
+    </ClerkProvider>
   );
 }
